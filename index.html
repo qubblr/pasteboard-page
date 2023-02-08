@@ -1,3 +1,7 @@
 <script>
-	navigator.clipboard.writeText('test string 123');
+	navigator.clipboard.writeText("SOME TEXT").then(function() {
+	  document.body.innerHTML = "clipboard successfully set";
+	}, function() {
+	  document.body.innerHTML = "clipboard WAS NOT successfully set";
+	});
 </script>
